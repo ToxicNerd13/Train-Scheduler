@@ -53,10 +53,10 @@ let firebaseConfig = {
        let frequency = snapshot.val().frequency;
 
        // Calculate Next Arrival
-       let nextArrival = ;
+       let nextArrival;
 
        // Calculate Mins Away
-       let minsAway = ;
+       let minsAway;
 
        // Create new table rows with database info
        let newRow = $("<tr>").append(
