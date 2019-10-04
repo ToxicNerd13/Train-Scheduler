@@ -43,6 +43,29 @@ let firebaseConfig = {
         $("#destination-input").val("");
         $("#first-train-input").val("");
         $("#frequency-input").val("");
-   })
+   });
+
+   // Get Firebase info every time it's added to database
+   database.ref().on("child_added", function(snapshot) {
+       let trainName = snapshot.val().name;
+       let destination = snapshot.val().destination;
+       let firstTrain = snapshot.val().firstTrain;
+       let frequency = snapshot.val().frequency;
+
+       // Calculate Next Arrival
+       let nextArrival = ;
+
+       // Calculate Mins Away
+       let minsAway = ;
+
+       // Create new table rows with database info
+       let newRow = $("<tr>").append(
+           $("<td>").text(trainName),
+           $("<td>").text(destination),
+           $("<td>").text(frequency),
+           $("<td>").text(),
+           $("<td>").text()
+       );
+   });
 
 })
